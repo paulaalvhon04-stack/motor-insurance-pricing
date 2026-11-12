@@ -3,7 +3,7 @@
 Predicting the expected number of claims per policy per year on a French motor insurance portfolio, comparing a Poisson GLM with LightGBM.
 
 ## Why it matters
-Insurers price a policy as **expected claim frequency × average claim cost**. This project focuses on the frequency part: if a model ranks drivers by risk more accurately, the insurer can offer lower prices to safe drivers while charging enough to cover riskier ones.
+Insurers price a policy as expected claim frequency × average claim cost. This project focuses on the frequency part: if a model ranks drivers by risk more accurately, the insurer can offer lower prices to safe drivers while charging enough to cover riskier ones.
 
 ## Data
 [freMTPL2freq](https://www.openml.org/d/41214): 678,013 French motor third-party liability policies with driver, vehicle and location features, claim counts and exposure (policy duration in years).
