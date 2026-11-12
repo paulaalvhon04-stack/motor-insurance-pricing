@@ -21,14 +21,14 @@ Insurers price a policy as **expected claim frequency × average claim cost**. T
 | Model | Poisson deviance | Deviance explained | Gini |
 |---|---|---|---|
 | Baseline (portfolio average) | 0.6274 | 0.0% | 0 |
-| Poisson GLM | 0.5944 | 5.3% | 0.28X |
+| Poisson GLM | 0.5944 | 5.3% | 0.285 |
 | **LightGBM** | **0.5762** | **8.2%** | **0.335** |
 
 ## Key findings
 - **Bonus-malus** is the strongest risk factor: drivers in the malus zone (130+) claim about 4.4 times more often than average.
 - **Young drivers' risk is largely explained by bonus-malus:** they have not had time to earn a bonus (average 95 at ages 18–20 vs about 53 over 50), so once bonus-malus is in the model, the separate effect of age is much smaller.
 - **New vehicles of brand B12** have a claim frequency of about 0.45, roughly 4.5 times the average, while older B12 vehicles are slightly below average. LightGBM learned this interaction on its own, whereas the GLM needed it added by hand.
-- **LightGBM beats the GLM** in both accuracy and risk ranking, while SHAP keeps it explainable.
+- **LightGBM beats the GLM** in both accuracy and risk ranking (Gini 0.335 vs 0.285), while SHAP keeps it explainable.
 
 ## Limitations and next steps
 - Some policyholders appear with split policies, so a grouped train/test split would give a stricter evaluation.
